@@ -1,0 +1,30 @@
+pipeline{
+    agent any
+    stages{
+        stage("maven archetype"){
+            steps{
+                sh "mvn archetype:generate"
+            }
+        }
+        stage("Choose a number"){
+            steps{
+                sh "1625"
+            }
+        }
+       stage("Choose a number"){
+         steps{
+          sh "8"
+       }
+      }
+       stage("group id"){
+        steps{
+          sh "icicibank"
+        }
+      }
+       stage("artifactId"){
+         steps{
+           sh "loans"
+        }
+       }
+    }
+}
